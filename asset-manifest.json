@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crypro-hunter/static/css/main.1a9a7a29.css",
+    "main.js": "/crypro-hunter/static/js/main.d227c1d3.js",
+    "index.html": "/crypro-hunter/index.html",
+    "main.1a9a7a29.css.map": "/crypro-hunter/static/css/main.1a9a7a29.css.map",
+    "main.d227c1d3.js.map": "/crypro-hunter/static/js/main.d227c1d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a9a7a29.css",
+    "static/js/main.d227c1d3.js"
+  ]
+}
