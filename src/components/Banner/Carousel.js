@@ -4,8 +4,25 @@ import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
 import { TrendingCoins } from "../../config/api";
-import { CryptoState } from "../../CryptoContext";
+import { CryptoState } from "../../Context/cryptoContext";
 import { numberWithCommas } from "../CoinsTable";
+
+const useStyles = makeStyles((theme) => ({
+  carousel: {
+    height: "50%",
+    display: "flex",
+    alignItems: "center",
+    border: '1px solid red'
+  },
+  carouselItem: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    cursor: "pointer",
+    textTransform: "uppercase",
+    color: "white",
+  },
+}));
 
 const Carousel = () => {
   const [trending, setTrending] = useState([]);
@@ -23,21 +40,7 @@ const Carousel = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
 
-  const useStyles = makeStyles((theme) => ({
-    carousel: {
-      height: "50%",
-      display: "flex",
-      alignItems: "center",
-    },
-    carouselItem: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      cursor: "pointer",
-      textTransform: "uppercase",
-      color: "white",
-    },
-  }));
+
 
   const classes = useStyles();
 
@@ -92,6 +95,7 @@ const Carousel = () => {
         disableButtonsControls
         responsive={responsive}
         items={items}
+        ver
         autoPlay
       />
     </div>
